@@ -1,6 +1,6 @@
 package 类与对象.第一节;
 
-public class TestDemo {
+public class Test {
     public static void main(String[] args) {
         int a = 10;
         Dog dog1 = new Dog();
