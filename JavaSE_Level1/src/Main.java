@@ -1,34 +1,55 @@
 import java.util.Scanner;
 
 public class Main {
-    public static boolean juage(String s){
-        if(s.length()<6||s.length()>10){
-            return false;
-        }
 
-        boolean hasDigit=false;
-        boolean hasUpper=false;
-        boolean hasLower = false;
-        boolean hasSpecial=false;
-
-        for(char c:s.toCharArray()){
-            if(Character.isWhitespace(c))
-                return false;
-            else if(Character.isDigit(c))
-                hasDigit = true;
-            else if(Character.isUpperCase(c))
-                hasUpper=true;
-            else if(Character.isLowerCase(c))
-                hasLower = true;
-            else
-                hasSpecial=true;
-        }
-        return hasDigit&&hasUpper&&hasLower&&hasSpecial;
-    }
     public static void main(String[] args) {
-        Scanner cin=new Scanner(System.in);
-        String s=cin.nextLine();
-        boolean valid=juage(s);
-        System.out.println(valid ? "Password is valid" : "Password is invalid");
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNextInt()) {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            int z = scanner.nextInt();
+            Sub sub = new Sub(x, y, z);
+            System.out.println(sub.calculate());
+        }
     }
+
+}
+
+class Base {
+
+    private int x;
+    private int y;
+
+    public Base(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+}
+
+class Sub extends Base {
+
+    private int z;
+
+    public Sub(int x, int y, int z) {
+        super(x, y);
+        this.z = z;
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public int calculate() {
+        return super.getX() * super.getY() * this.getZ();
+    }
+
 }
