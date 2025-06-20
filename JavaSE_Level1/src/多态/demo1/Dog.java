@@ -7,6 +7,8 @@ public class Dog extends Animal {
     void bark(){
         System.out.println(name+"正在汪汪叫");
     }
+
+    @Override
     void eat(){
         System.out.println(name+"正在吃狗粮");
     }

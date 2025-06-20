@@ -1,30 +1,36 @@
 import java.util.*;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        int t1 = cin.nextInt();
-        if (t1 < 0 || t1 > 24) {
-            System.out.println("Value for hours must be in the range 0 to 12");
-            return;
-        }
-        int t2 = cin.nextInt();
-        if (t2 < 0 || t2 > 59) {
-            System.out.println("Value for minutes must be in the range 0 to 59");
-            return;
+        int d = cin.nextInt();
+        int m = cin.nextInt();
+        int y = cin.nextInt();
+        boolean vaild = true;
+        if (d > 31 || d < 1 || m < 1 || m > 12) {
+            vaild = false;
         } else {
-            int c = cin.nextInt();
-            if (c == 1) {
-                if (t1 > 12) {
-                    t1 = t1 % 12;
-                }
-            } else {
-                if (t1 == 0) {
-                    t1 = 12;
+            if (m == 4 || m == 6 || m == 9 || m == 11) {
+                if (d > 30) {
+                    vaild = false;
                 }
             }
-            System.out.printf("%02d:%02d", t1, t2);
+            if (m == 2) {
+                if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+                    if (d > 29) {
+                        vaild = false;
+                    }
+                } else {
+                    if (d > 28) {
+                        vaild = false;
+                    }
+                }
+            }
         }
-
+        if (vaild) {
+            System.out.println("valid date");
+        } else {
+            System.out.println("invalid date");
+        }
     }
 }

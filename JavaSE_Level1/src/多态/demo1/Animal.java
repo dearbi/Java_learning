@@ -33,7 +33,7 @@ public class Animal {
                 '}';
     }
 
-    void eat() {
+      void eat() {
         System.out.println(name + "正在吃饭");
     }
 }
