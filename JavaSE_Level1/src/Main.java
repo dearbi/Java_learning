@@ -3,34 +3,18 @@ import java.util.*;
 class Main {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        int d = cin.nextInt();
-        int m = cin.nextInt();
-        int y = cin.nextInt();
-        boolean vaild = true;
-        if (d > 31 || d < 1 || m < 1 || m > 12) {
-            vaild = false;
+        String s = cin.nextLine();
+        int n = s.length();
+        if (s.charAt(n - 1) != 'y') {
+            System.out.println("Cannot form the plural form with the rules given.");
         } else {
-            if (m == 4 || m == 6 || m == 9 || m == 11) {
-                if (d > 30) {
-                    vaild = false;
-                }
+            if (s.charAt(n - 2) == 'u' || s.charAt(n - 3) == 'q') {
+                System.out.print("soliloquy in plural form is: ");
+                System.out.println(s.substring(0, n - 1) + "ies");
+            } else if ("qeiou".indexOf(s.charAt(n - 2)) != -1) {
+                System.out.print(s + " ");
+                System.out.print("in plural form is: " + s + "s");
             }
-            if (m == 2) {
-                if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
-                    if (d > 29) {
-                        vaild = false;
-                    }
-                } else {
-                    if (d > 28) {
-                        vaild = false;
-                    }
-                }
-            }
-        }
-        if (vaild) {
-            System.out.println("valid date");
-        } else {
-            System.out.println("invalid date");
         }
     }
 }
