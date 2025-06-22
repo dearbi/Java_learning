@@ -12,6 +12,7 @@ class Main {
                 System.out.print("soliloquy in plural form is: ");
                 System.out.println(s.substring(0, n - 1) + "ies");
             } else if ("qeiou".indexOf(s.charAt(n - 2)) != -1) {
+
                 System.out.print(s + " ");
                 System.out.print("in plural form is: " + s + "s");
             }
