@@ -1,8 +1,9 @@
 package 图书系统项目.book;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-public class Book implements Comparable<Book>{
+public class Book implements Comparable<Book> {
     private int bookId; //书id
     private String title; // 书名
     private String author; // 作者
@@ -21,62 +22,81 @@ public class Book implements Comparable<Book>{
         this.publishYear = publishYear;
         this.isBorrowed = false;
         this.borrowCount = 0;
-        this.shelfDate = shelfDate;
+        this.shelfDate = LocalDate.from(shelfDate);
     }
+
     public int getBookId() {
         return bookId;
     }
+
     public void setBookId(int bookId) {
         this.bookId = bookId;
     }
+
     public String getTitle() {
         return title;
     }
+
     public void setTitle(String title) {
         this.title = title;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public void setAuthor(String author) {
         this.author = author;
     }
+
     public String getCategory() {
         return category;
     }
+
     public void setCategory(String category) {
         this.category = category;
     }
+
     public int getPublishYear() {
         return publishYear;
     }
+
     public void setPublishYear(int publishYear) {
         this.publishYear = publishYear;
     }
+
     public boolean isBorrowed() {
         return isBorrowed;
     }
+
     public void setBorrowed(boolean borrowed) {
         isBorrowed = borrowed;
     }
+
     public int getBorrowCount() {
         return borrowCount;
     }
+
     public void setBorrowCount(int borrowCount) {
         this.borrowCount = borrowCount;
     }
+
     public void incrementBorrowCount() {
         this.borrowCount++;
     }
+
     public void decreaseBorrowCount() {
         this.borrowCount--;
     }
+
     public LocalDate getShelfDate() {
         return shelfDate;
     }
+
     public void setShelfDate(LocalDate shelfDate) {
         this.shelfDate = shelfDate;
     }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -86,13 +106,17 @@ public class Book implements Comparable<Book>{
                 ", category='" + category + '\'' +
                 ", publishYear=" + publishYear +
                 ", isBorrowed=" + isBorrowed +
-                ", borrowCount=" + borrowCount +", shelfDate=" + shelfDate +
+                ", borrowCount=" + borrowCount + ", shelfDate=" + shelfDate +
                 '}';
     }
 
     @Override
     public int compareTo(Book o) {
-        return 0;
+        return o.getBorrowCount() - this.getBorrowCount();
+    }
+
+    public String toJSON() {
+        return title + "," + author + "," + category + "," + publishYear + ",shelfDate:" + shelfDate;
     }
 }
 

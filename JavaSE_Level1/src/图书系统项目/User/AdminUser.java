@@ -1,5 +1,9 @@
 package 图书系统项目.User;
 
+import 图书系统项目.book.Book;
+import 图书系统项目.book.Library;
+
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class AdminUser extends User{
@@ -7,6 +11,7 @@ public class AdminUser extends User{
     public AdminUser(String name, int userID) {
         super(name, userID,"管理员");
     }
+    public Library library=new Library();
     @Override
     public int display() {
         System.out.println("管理员 " + name + " 的操作菜单:");
@@ -31,6 +36,21 @@ public class AdminUser extends User{
     //其他操作⽅法
     //上架图书
     public void addBook() {
+        scanner.nextLine();
+        System.out.println("请输⼊书名：");
+        String title = scanner.nextLine(); // 输⼊书名
+        System.out.println("请输⼊作者：");
+        String author = scanner.nextLine(); // 输⼊作者
+        System.out.println("请输⼊类别：");
+        String category = scanner.nextLine(); // 输⼊图书类别
+        System.out.println("请输⼊出版年份：");
+        int year = scanner.nextInt(); // 输⼊出版年份
+        scanner.nextLine(); // 吞掉换⾏符
+        LocalDate shelfDate = LocalDate.now(); // 当前时间作为上架时间
+        Book newBook = new Book(title, author, category, year, shelfDate);
+        // 创建新书对象
+        //调⽤图书类 添加图书
+        library.addBook(newBook);
     }
     //图书修改 ⽀持修改书名 作者 类别
     public void updateBook() {
@@ -56,5 +76,6 @@ public class AdminUser extends User{
     public void checkAndRemoveOldBooks() {
     }
     public void exit() {
+        System.out.println("退出系统");
     }
 }
