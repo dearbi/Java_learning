@@ -35,5 +35,7 @@ public static final int BORROWED_BOOK = 4;
     public static final int RETURN_BOOK = 5;
     //查看个⼈借阅情况
     public static final int VIEW_BORROW_HISTORY_BOOK = 6;
+    public static final String BORROWED_BOOK_FILE_NAME = "D:\\java_code\\Java_learning\\JavaSE_Level1\\src\\borrowedbook.txt";
+
 
 }
