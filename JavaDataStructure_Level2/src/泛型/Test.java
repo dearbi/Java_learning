@@ -1,3 +1,5 @@
+package 泛型;
+
 class MyArray<T> {
     public Object[] array = new Object[10];
 
@@ -28,7 +30,6 @@ public class Test {
         myArray.setVal(1,23);
         Integer ret=myArray.getPos(1);
         System.out.println(ret);
-
 
         MyArray<String> myArray2 = new MyArray<String>();
         myArray2.setVal(0,"hello");
