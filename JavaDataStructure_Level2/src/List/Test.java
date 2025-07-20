@@ -1,13 +1,28 @@
 package List;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList= new ArrayList<>();
         List<Integer> list =new ArrayList<>();
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+
+        Iterator<Integer> it=arrayList.iterator();
+        while(it.hasNext()){
+            System.out.print(it.next()+" ");
+        }
+        System.out.println();
+        System.out.println("===========");
+        ListIterator<Integer>  lit=arrayList.listIterator();
+        ListIterator<Integer>  lit2=arrayList.listIterator(arrayList.size());
+        while(lit2.hasPrevious()){
+            System.out.print(lit2.previous()+" ");
+        }
+        System.out.println();
     }
     public static void main2(String[] args) {
         ArrayList<Integer> arrayList=new ArrayList<>();
@@ -43,3 +58,4 @@ public class Test {
 
     }
 }
+

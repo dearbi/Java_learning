@@ -65,6 +65,6 @@ public class 泛型 {
         int ret = alg1.findMax(array);
         System.out.println(ret);
         Alg<String> alg2 = new Alg<String>();
-//        Alg<Stundet> alg2 = new Alg<Stundet>();
+//        Alg<Stundet> alg2 = new Alg<Stundet>;()
     }
 }

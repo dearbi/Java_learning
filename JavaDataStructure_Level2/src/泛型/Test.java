@@ -21,7 +21,6 @@ public class Test {
 
         Integer i2=Integer.valueOf(a);
         System.out.println(i2);
-
     }
 
     public static void main(String[] args) {

@@ -13,14 +13,13 @@ class Message<T> {
 }
 
 public class 通配符 {
-    public static void fun(Message<String> temp){
+    public static void fun(Message<?> temp){
         System.out.println(temp.getMessage());
     }
 
     public static void main(String[] args) {
         Message<String> message = new Message<String>() ;
-        message.setMessage("⽐特就业课欢迎您");
+        message.setMessage("hello");
         fun(message);
-
     }
 }
