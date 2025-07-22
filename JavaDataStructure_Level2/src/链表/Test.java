@@ -11,13 +11,20 @@ public class Test {
         mySingleList.addFirst(56);
 
         mySingleList.show();
+        MySingleList.ListNode ret=mySingleList.middleNode();
+        System.out.println(ret.val);
         System.out.println();
         mySingleList.addLast(19);
         mySingleList.addLast(29);
         mySingleList.show();
         System.out.println();
+
+        mySingleList.remove(34);
+        mySingleList.show();
+        System.out.println();
         System.out.println(mySingleList.size());
         System.out.println(mySingleList.contains(16));
+        mySingleList.clear();
 
     }
 }
