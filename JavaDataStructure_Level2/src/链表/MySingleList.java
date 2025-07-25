@@ -73,7 +73,7 @@ public class MySingleList {
             return;
         }
         ListNode node=new ListNode(data);
-        ListNode cur=searchIndex(index);
+        ListNode cur=searchIndex(index-1);
         node.next=cur.next;
         cur.next=node;
         return;
