@@ -14,6 +14,7 @@ public class Dog {
         System.out.println(name + "在睡觉");
     }
 
+
     public void bark() {
         System.out.println(name + "在狗叫");
     }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="JavaDataStructure_Level2/src"/>
+	<classpathentry kind="src" path="JavaSE_Level1/src"/>
+	<classpathentry kind="src" path="TextCode/src"/>
+	<classpathentry kind="lib" path="lib/FileUtils.jar"/>
+	<classpathentry kind="output" path="JavaSE_Level1/out/production/J20250508"/>
+</classpath>

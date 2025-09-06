@@ -15,7 +15,6 @@ public class Test {
         for(String s: result) {
             System.out.println(s);
         }
-
     }
     public static void main1(String[] args) {
         String str = "abcdef";
