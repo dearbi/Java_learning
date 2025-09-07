@@ -4,3 +4,46 @@ div{
         /* 设置字体大小 */
         font-size: 30px;
    }
+
+p {
+    color: red;
+}
+div {
+    color: green;
+}
+ol li {
+    color: red;
+}
+.one li a{
+    color: rgb(137, 13, 13);
+}
+
+.text-decorate .one {
+    text-decoration: none;
+}
+.text-decorate .two {
+    line-height: 15px;
+    height: 15px;
+    text-decoration: underline;
+}
+.text-decorate .three {
+    text-decoration: overline;
+}
+.text-decorate .four {
+    text-decoration: line-through;
+}
+body{
+    background-color: aqua;
+    background-image: url("textp.jpg");
+}
+    .bgc .one {
+        background-color: red;
+    }
+    .bgc .two {
+        background-color: #0f0;
+    }
+    .bgc .three {
+        /* 背景透明 */
+        background-color: transparent;
+    }
+    
