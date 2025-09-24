@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="点我一下" onclick="alert('haha')">
+    
+    
+</body>
+<script>
+    /*prompt("请输入您的姓名:");
+    弹出一个输出框
+    alert("hello");
+    console.log("这是一条日志");
+    let name="张三"
+    console.log(name);
+    name="sos";
+    let a = "my name is ";
+    let b = "zhangsan";
+    console.log(a + b);
+    var num = 10;
+    if (num % 2 == 0) {
+        console.log("num 是偶数");
+    } else {
+        console.log("num 是奇数");
+    }
+    */
+
+
+
+    function Cat(name, type, sound) {
+    this.name = name;
+    this.type = type;
+    this.miao = function () {
+        console.log(sound); // 别忘了作用域的链式访问规则
+    }
+}
+    var mimi = new Cat('咪咪', '中华田园喵', '喵');
+    var xiaohei = new Cat('小黑', '波斯喵', '猫呜');
+    var ciqiu = new Cat('刺球', '金渐层', '咕噜噜');
+    console.log(mimi);
+    mimi.miao();
+    
+</script>
+</html>

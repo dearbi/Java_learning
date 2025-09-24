@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test..css">
+</head>
+<body>
+    <div class="box">abc</div>
+    <div id="id">def</div>
+    <h3><span><input type="text"></span></h3>
+    <script>
+        var elem1 = document.querySelector('.box');
+        console.log(elem1);
+        var elem2 = document.querySelector('#id');
+        console.log(elem2);
+        var elem3 = document.querySelector('h3 span input');
+        console.log(elem3);
+    </script>
+    <div class="box">abc</div>
+    <div id="id">def</div>
+    <script>
+        var elems = document.querySelectorAll('div');
+        console.log(elems);
+    </script>
+    <button id="btn">点我一下</button>
+    <script>
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+            alert('点击了');
+        }
+        console.log(btn);
+    </script>
+    
+    <div id="sm">
+    <span>hello world</span>
+    <span>hello world</span>
+    </div>
+    <script>
+        var div = document.querySelector('#sm');
+        // 读取 div 内部内容
+        console.log(div.innerText);
+        // 修改 div 内部内容, 界面上就会同步修改
+        div.innerText = 'hello js <span>hello js</span>';
+    </script>
+
+    <div id="sex">
+    <span>hello world</span>
+    <span>hello world</span>
+    </div>
+    <script>
+        var div = document.querySelector('#sex');
+        // 读取页面内容
+        console.log(div.innerHTML);
+        // 修改页面内容
+        div.innerHTML = '<span>hello js</span>'
+    </script>
+    <img src="/前端基础/textp.jpg" alt="这是头像" height="200px">
+    <script>
+         var img = document.querySelector('img');
+            img.onclick = function () {
+        if (img.src.lastIndexOf('/前端基础/textp.jpg') !== -1) {
+            img.src = '/前端基础/textp.jpg';
+        } else {
+            img.src = '/前端基础/textp.jpg';
+        }
+    }
+    </script>
+    </script>
+    <br>
+    <input type="button" value="播放">
+<script>
+    var btn = document.querySelector('input');
+    btn.onclick = function () {
+        if (btn.value === '播放') {
+            btn.value = '暂停';
+        } else {
+            btn.value = '播放';
+        }
+    }
+</script>
+
+<input type="text" id="text" value="0">
+<input type="button" id="btn" value='点我+1'>
+<script>
+    var text = document.querySelector('#text');
+    var btn = document.querySelector('#btn');
+    btn.onclick = function () {
+        var num = +text.value;
+        console.log(num);
+        num++;
+        text.value = num;
+    }
+</script>
+<br>
+
+<input type="checkbox" id="all">我全都要 <br>
+<input type="checkbox" class="girl">貂蝉 <br>
+<input type="checkbox" class="girl">小乔 <br>
+<input type="checkbox" class="girl">安琪拉 <br>
+<input type="checkbox" class="girl">妲己 <br>
+
+<script>
+  // 1. 获取到元素
+    var all = document.querySelector('#all');
+    var girls = document.querySelectorAll('.girl');
+    // 2. 给 all 注册点击事件, 选中/取消所有选项
+    all.onclick = function () {
+        for (var i = 0; i < girls.length; i++) {
+            girls[i].checked = all.checked;
+        }
+    }
+    // 3. 给 girl 注册点击事件
+    for (var i = 0; i < girls.length; i++) {
+        girls[i].onclick = function () {
+            // 检测当前是不是所有的 girl 都被选中了. 
+            all.checked = checkGirls(girls);
+        }
+    }
+    // 4. 实现 checkGirls
+    function checkGirls(girls) {
+        for (var i = 0; i < girls.length; i++) {
+            if (!girls[i].checked) {
+                // 只要一个 girl 没被选中, 就认为结果是 false(找到了反例)
+                return false;
+            }
+        }
+        // 所有 girl 中都没找到反例, 结果就是全选中
+        return true;
+    }
+</script>
+<div style="font-size: 20px; font-weight: 700;">
+    哈哈
+</div>
+<script>
+    var div = document.querySelector('div');
+    div.onclick = function () {
+        var curFontSize = parseInt(this.style.fontSize);//parseIntz转成整数
+        curFontSize += 100;
+        this.style.fontSize = curFontSize + "px";
+    }
+</script>
+
+<!-- 'container'和'light'是class的两个属性，用空格来分割，不是一个属性 -->
+
+<div class="container light">
+    白天模式和夜间模式
+</div>
+<script>
+    var div = document.querySelector('.container');
+    div.onclick = function () {
+        console.log(div.className);
+        if (div.className.indexOf('light') != -1) {
+            div.className = 'container dark';
+        } else {
+            div.className = 'container light';
+        }
+    }
+</script>
+
+
+
+<div class="container light">
+    好评
+</div>
+<script>
+    var div = document.createElement('.container');
+    div.id = 'mydiv';
+    div.className = 'box';
+    div.innerHTML = 'hehe';
+    console.log(div);
+    var container = document.querySelector('.container');
+    container.appendChild(div);
+</script>
+
+
+
+<div id="my-container">
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    <div>44</div>
+</div>
+<script>
+    var newDiv = document.createElement('div');
+
+    newDiv.innerHTML = '我是新的节点';
+    var container = document.querySelector('#my-container');
+    console.log(container.children);
+    container.insertBefore(newDiv, container.children[0]);
+</script>
+
+
+</body>
+</html>

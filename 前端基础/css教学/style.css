@@ -7,19 +7,25 @@ div{
 
 p {
     color: red;
+    font-size: 10px;
 }
 div {
-    color: green;
+    color: rgb(27, 45, 27);
+    width: 200px;
+    height: 200px;
+    border: 2px solid green;
+    border-radius: 100px
 }
 ol li {
-    color: red;
+    color: rgb(75, 25, 25);
 }
 .one li a{
-    color: rgb(137, 13, 13);
+    color: rgb(78, 40, 40);
 }
 
 .text-decorate .one {
     text-decoration: none;
+    text-indent: 0.25em;
 }
 .text-decorate .two {
     line-height: 15px;
@@ -33,17 +39,39 @@ ol li {
     text-decoration: line-through;
 }
 body{
-    background-color: rgb(46, 186, 186);
-    background-image: url("../textp.jpg");
+    background-color: rgb(213, 220, 220);
+    /* background-image: url("../textp.jpg");
+    text-align: center; */
+    background-repeat: repeat;
+    font-family:'Courier New',  'Microsoft YaHei';
 }
-    .bgc .one {
-        background-color: red;
-    }
-    .bgc .two {
-        background-color: #0f0;
-    }
-    .bgc .three {
-        /* 背景透明 */
-        background-color: transparent;
-    }
+.bgc .one {
+    background-color: red;
+}
+.bgc .two {
+    background-color: #0f0;
+}
+.bgc .three {
+    /* 背景透明 */
+    background-color: transparent;
+}
     
+a:link{
+    color: red;
+    text-decoration: none;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
+}
+.color {
+        color: rgb(214, 48, 48);
+        /* color: rgb(255, 0, 0); */
+        /* color: #ff0000; */
+        background-color: #0f0;
+   }

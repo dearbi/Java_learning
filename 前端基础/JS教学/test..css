@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+    .container {
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .light {
+        background-color: white;
+        color: black;
+    }
+    .dark {
+        background-color: black;
+        color: white;
+    }
+    .test1{
+        background-color: red;
+
+    }
+
+    #my-container {
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
