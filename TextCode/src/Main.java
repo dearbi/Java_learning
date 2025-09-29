@@ -1,43 +1,40 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        scanner.nextLine(); // 消耗掉整数后的换行符
-        String str1 = scanner.next();
-        String str2 = scanner.next();
-        scanner.nextLine(); // 消耗掉两个字符串后的换行符
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int lastStr1Index = -1;
-        int lastStr2Index = -1;
-        int minDistance = Integer.MAX_VALUE;
+        String[] line = br.readLine().split(" ");
+        int n = Integer.parseInt(line[0]);
+        int x = Integer.parseInt(line[1]);
 
-        for (int i = 0; i < n; i++) {
-            String currentStr = scanner.nextLine();
+        int[] a = new int[n + 1];
+        String[] nums = br.readLine().split(" ");
+        for (int i = 1; i <= n; i++) {
+            a[i] = Integer.parseInt(nums[i - 1]);
+        }
 
-            if (currentStr.equals(str1)) {
-                lastStr1Index = i;
-                // 如果str2之前出现过，计算距离
-                if (lastStr2Index != -1) {
-                    minDistance = Math.min(minDistance, lastStr1Index - lastStr2Index);
+        // ✅ 使用 windowSum 表示当前窗口和
+        long windowSum = 0;
+        int left = 1;
+        int minLength = Integer.MAX_VALUE;
+        int bestL = -1, bestR = -1;
+
+        for (int right = 1; right <= n; right++) {
+            windowSum += a[right];
+
+            while (windowSum >= x && left <= right) {
+                int currentLength = right - left + 1;
+                if (currentLength < minLength || (currentLength == minLength && left < bestL)) {
+                    minLength = currentLength;
+                    bestL = left;
+                    bestR = right;
                 }
-            } else if (currentStr.equals(str2)) {
-                lastStr2Index = i;
-                // 如果str1之前出现过，计算距离
-                if (lastStr1Index != -1) {
-                    minDistance = Math.min(minDistance, lastStr2Index - lastStr1Index);
-                }
+                windowSum -= a[left++];
             }
         }
 
-        // 判断str1或str2是否不存在
-        if (lastStr1Index == -1 || lastStr2Index == -1) {
-            System.out.println(-1);
-        } else {
-            System.out.println(minDistance);
-        }
-
-        scanner.close();
+        System.out.println(bestL + " " + bestR);
     }
 }

@@ -9,24 +9,23 @@
     <div class="container">
         <h1>表白墙</h1>
         <p>输入后点击提交，会将信息显示在表格中</p>
+        
+        <div class="row">
+            <span>谁：</span>
+            <input type="text" class="edit">
+        </div>
+        <div class="row">
+            <span>对谁：</span>
+            <input type="text" class="edit">
+        </div>
+        <div class="row">
+            <span>说什么：</span>
+            <input type="text" class="edit">
+        </div>
+        <div class="row">
+        <input type="button" value="提交" class="submit">
+        </div>
     </div>
-    
-    <div class="row">
-        <span>谁：</span>
-        <input type="text" class="edit">
-    </div>
-    <div class="row">
-        <span>对谁：</span>
-        <input type="text" class="edit">
-    </div>
-    <div class="row">
-        <span>说什么：</span>
-        <input type="text" class="edit">
-    </div>
-    <div class="row">
-      <input type="button" value="提交" class="submit">
-    </div>
-
 </body>
 <style>
     *{
@@ -79,7 +78,19 @@
         var from = edit[0].value;
         var to = edit[1].value;
         var message = edit[2].value;
-        console.logh(from + "," + to + "," + message);  
+        console.log(from + "," + to + "," + message); 
+        if(from == ''|| to == ''|| message == ''){
+            return alert('请填写完整信息');
+        }
+
+        // 2.构造html元素
+        var row = document.createElement('div');
+        row.className = 'row';
+        row.innerHTML = from + '对' + to + '说: ' + message;
+
+        // 3.把构造好的元素添加进去
+        var container = document.querySelector('.container');
+        container.appendChild(row);
     }
     
 </script>
