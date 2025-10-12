@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj={
+            name:'vue3',
+            age:9
+        }
+
+        //取值
+        //点
+        console.log(obj.name)
+        console.log(obj.age)
+
+        //中括号
+        console.log(obj['name'])
+        console.log(obj['age'])
+
+        //当属性名为字符串的时候，只能用中括号取值
+        let x = 'name'
+        let y = 'age'
+        console.log(obj[x])
+        console.log(obj[y])
+
+        //简写
+            //不简写的情况
+        let min=1
+        let max=99
+        const obj2={
+            min:min,
+            max:max
+        }
+        console.log(obj2)
+        //简写的情况
+        const obj3={
+            min,
+            max
+        }
+        console.log(obj3)
+    </script>
+</body>
+</html>

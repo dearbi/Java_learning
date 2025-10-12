@@ -6,7 +6,7 @@
 
   <router-link to="/">首页</router-link>
   <router-link to="/Hello">hello</router-link>
-  <router-link to="/Haha">haha</router-link>
+  <router-link to="/Haha/111">haha</router-link>
   <hr>
   <router-view></router-view>
 <!--1.整合vue-router-->
@@ -18,6 +18,9 @@
 </template>
 
 <style scoped>
+a{
+  margin-left: 10px ;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

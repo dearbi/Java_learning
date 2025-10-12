@@ -5,18 +5,18 @@ import Haha from "../views/Haha.vue";
 import {createMemoryHistory, createRouter} from "vue-router";
 
 const routes = [
-  {
-    path: '/',
-    component: Home
-  },
-  {
-    path: '/hello',
-    component: Hello
-  },
-  {
-    path: '/haha',
-    component: Haha
-  }
+    {
+        path: '/',
+        component: Home
+    },
+    {
+        path: '/hello',
+        component: Hello
+    },
+    {
+        path: '/haha/:id',
+        component: Haha
+    }
 ]
 //2.配置路由表
 const router = createRouter({
