@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组的解构
+       const arr=[11,22,33]
+       //eg1.把arr的三个元素分别赋值给a,b,c
+       let [a,b,c]=arr
+       console.log(a,b,c)
+
+       //eg2.把arr的后两个元素分别赋值给x,y
+       let [,x,y]=arr
+       console.log(x,y)
+
+       //eg3.把arr的第一个元素赋值给m，第三个元素赋值给n
+       let [m,,,n]=arr
+       console.log(m,n)
+
+       //eg4.把arr的第一个元素赋值给l，其他元素赋值给r
+       let [l,...r]=arr
+       console.log(l,r)
+
+       //eg5.练习
+       const arr2=[2,[3,4],5]
+       //把arr2的第一个元素赋值给q，第二个元素的第一个元素赋值给w，第二个元素的第二个元素赋值给e，第三个元素赋值给t
+       let [q,[w,e],t]=arr2
+       console.log(q,w,e,t)
+    </script>
+    
+    
+</body>
+</html>
