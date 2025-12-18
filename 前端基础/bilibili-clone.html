@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        
+        .bili-pink {
+            color: #fb7299;
+        }
+        
+        .bili-pink-bg {
+            background-color: #fb7299;
+        }
+        
+        .bili-blue {
+            color: #00a1d6;
+        }
+        
+        .bili-blue-bg {
+            background-color: #00a1d6;
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-card:hover .video-thumbnail {
+            opacity: 0.9;
+        }
+        
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #fb7299;
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-item {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+        
+        .carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .carousel-btn.prev {
+            left: 10px;
+        }
+        
+        .carousel-btn.next {
+            right: 10px;
+        }
+        
+        .carousel-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .carousel-dot.active {
+            background: white;
+            width: 24px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-[1440px] mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-10 h-10 bili-pink" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/>
+                        </svg>
+                        <span class="text-2xl font-bold bili-pink">bilibili</span>
+                    </div>
+                    
+                    <!-- 主导航 -->
+                    <div class="hidden lg:flex items-center space-x-6 text-sm">
+                        <a href="#" class="nav-link font-medium text-gray-700">首页</a>
+                        <a href="#" class="nav-link font-medium text-gray-700">番剧</a>
+                        <a href="#" class="nav-link font-medium text-gray-700">直播</a>
+                        <a href="#" class="nav-link font-medium text-gray-700">游戏中心</a>
+                        <a href="#" class="nav-link font-medium text-gray-700">会员购</a>
+                        <a href="#" class="nav-link font-medium text-gray-700">漫画</a>
+                        <a href="#" class="nav-link font-medium text-gray-700">赛事</a>
+                    </div>
+                </div>
+                
+                <!-- 搜索框 -->
+                <div class="flex-1 max-w-md mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="搜索你感兴趣的内容..." 
+                               class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:border-pink-400">
+                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bili-pink-bg text-white px-4 py-1 rounded-full text-sm">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 右侧按钮 -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block text-gray-600 hover:text-pink-500">
+                        <i class="far fa-bell text-xl"></i>
+                    </button>
+                    <button class="bili-pink-bg text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90">
+                        登录
+                    </button>
+                    <button class="border-2 border-pink-400 bili-pink px-6 py-2 rounded-full text-sm font-medium hover:bg-pink-50">
+                        注册
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="pt-20 max-w-[1440px] mx-auto px-6">
+        <!-- 分区导航 -->
+        <div class="bg-white rounded-lg shadow-sm mb-6 mt-6">
+            <div class="flex items-center space-x-8 px-6 py-4 overflow-x-auto">
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-fire text-2xl text-orange-500"></i>
+                    <span class="text-sm font-medium text-gray-700">热门</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-video text-2xl bili-pink"></i>
+                    <span class="text-sm font-medium text-gray-700">动画</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-gamepad text-2xl text-purple-500"></i>
+                    <span class="text-sm font-medium text-gray-700">游戏</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-music text-2xl text-blue-500"></i>
+                    <span class="text-sm font-medium text-gray-700">音乐</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-tv text-2xl text-green-500"></i>
+                    <span class="text-sm font-medium text-gray-700">影视</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-flask text-2xl text-yellow-500"></i>
+                    <span class="text-sm font-medium text-gray-700">科技</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-utensils text-2xl text-red-500"></i>
+                    <span class="text-sm font-medium text-gray-700">美食</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-basketball-ball text-2xl text-indigo-500"></i>
+                    <span class="text-sm font-medium text-gray-700">运动</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-car text-2xl text-gray-600"></i>
+                    <span class="text-sm font-medium text-gray-700">汽车</span>
+                </button>
+                <button class="flex flex-col items-center space-y-1 nav-link group">
+                    <i class="fas fa-smile text-2xl text-pink-400"></i>
+                    <span class="text-sm font-medium text-gray-700">生活</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex gap-6">
+            <!-- 左侧主内容 -->
+            <div class="flex-1">
+                <!-- 轮播图 -->
+                <div class="carousel-container bg-white rounded-lg shadow-sm mb-6 overflow-hidden" style="height: 360px;">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&h=360&fit=crop" 
+                                 alt="Banner 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&h=360&fit=crop" 
+                                 alt="Banner 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=360&fit=crop" 
+                                 alt="Banner 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&h=360&fit=crop" 
+                                 alt="Banner 4" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+
+                <!-- 推荐视频标题 -->
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">推荐视频</h2>
+                    <button class="text-sm text-gray-500 hover:text-pink-500">
+                        <i class="fas fa-sync-alt mr-1"></i>换一换
+                    </button>
+                </div>
+
+                <!-- 视频网格 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
