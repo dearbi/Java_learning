@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaEE/JavaEE.iml" filepath="$PROJECT_DIR$/JavaEE/JavaEE.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_learning.iml" filepath="$PROJECT_DIR$/Java_learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/TextCode/TextCode.iml" filepath="$PROJECT_DIR$/TextCode/TextCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_review/test_review.iml" filepath="$PROJECT_DIR$/test_review/test_review.iml" />
     </modules>
   </component>
 </project>
