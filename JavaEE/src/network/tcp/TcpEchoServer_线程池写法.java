@@ -81,7 +81,7 @@ public class TcpEchoServer_线程池写法 {
         }
     }
 
-    private String process(String request) {
+    public String process(String request) {
         return request;
     }
 
