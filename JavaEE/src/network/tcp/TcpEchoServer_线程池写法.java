@@ -26,7 +26,7 @@ public class TcpEchoServer_线程池写法 {
             //TCP每次循环，每次循环是要处理一个连接
             //一个连接里，可能包含了多个请求和响应
             Socket socket = serverSocket.accept();
-            //之前是直接调用,会存在问题
+            //之前是直接调用,会存在问题玩具玩具
 //            processConnection(socket);
 
             //还可以使用线程池的方式，进一步减少频繁创建销毁线程的开销
