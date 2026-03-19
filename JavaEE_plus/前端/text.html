@@ -1,0 +1,208 @@
+<!-- 列表页 -->
+<!DOCTYPE html>
+<html lang="zh-CN"  class="webplus-list"  >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>青春在线 - 历届建设团队</title>
+    <link rel="stylesheet" type="text/css" href="/_upload/tpl/05/c2/1474/template1474/css/aboutUsCommon.css">
+    <link rel="stylesheet" type="text/css" href="/_upload/tpl/05/c2/1474/template1474/css/jianshe.css">
+    <link rel="stylesheet" type="text/css" href="/_upload/tpl/05/c2/1474/template1474/css/aboutUsModern.css">
+    <link rel="stylesheet" type="text/css" href="/_upload/tpl/05/c2/1474/template1474/css/aboutUsFooter.css">
+    <style>
+        /* 加载和错误状态样式 */
+        .loading {
+            text-align: center;
+            padding: 50px 20px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .loading::before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 20px;
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-message {
+            background-color: #fce4e4;
+            border-left: 4px solid #f44336;
+            padding: 20px;
+            margin: 30px 0;
+            color: #d92424;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+    </style>
+    <script type="text/javascript">
+        function setTab(n) {
+            var tli = document.getElementById("leftmenu0").getElementsByTagName("li");
+            var mli = document.getElementById("mcont0").getElementsByTagName("ul");
+            for (i = 0; i < tli.length; i++) {
+                tli[i].className = i == n ? "hover" : "";
+                mli[i].style.display = i == n ? "block" : "none";
+            }
+        }
+        // 菜单切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const siderMenu = document.getElementById('leftmenu0');
+            
+            if (menuToggle && sidebar) {
+                menuToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                });
+
+                //点击侧边栏菜单项时关闭菜单
+                if (siderMenu) {
+                    siderMenu.addEventListener('click', function(event) {
+                        if (event.target.tagName === 'LI') {
+                            sidebar.classList.remove('active');
+                        }
+                    });
+                }
+                
+                // 点击页面其他地方关闭菜单
+                document.addEventListener('click', function(event) {
+                    if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="/_upload/tpl/05/c2/1474/template1474/js/aboutUsMain.js"></script>
+    <style>
+        /* 返回顶部按钮样式 */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #008AFF;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        /* 移动端显示，桌面端隐藏 */
+        @media (min-width: 768px) {
+            .back-to-top {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="logo"> <a href="https://youth.sdut.edu.cn/"> <img src="/_upload/tpl/05/c2/1474/template1474/images/logo.png" alt="青春在线Logo" width="100%"> </a> </div>
+        <div class="nav">
+            <ul>
+                <li><a href="https://youth.sdut.edu.cn/" style="color: #008AFF ;">返回主站</a></li>
+            </ul>
+        </div>
+        <!-- <div class="nav">
+            <ul>
+                <li><a href="https://youth.sdut.edu.cn/about/index.html">网站介绍</a></li>
+                <li><a href="https://youth.sdut.edu.cn/about/lanmu.html">栏目设置</a></li>
+                <li><a href="https://youth.sdut.edu.cn/about/jianshe.html" class="active">建设团队</a></li>
+                <li><a href="https://youth.sdut.edu.cn/about/timeline.html">大事记</a></li>
+                <li><a href="https://youth.sdut.edu.cn/about/joinus.html">加入我们</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="container">
+        <div class="sidebar-container">
+            <button class="menu-toggle" id="menuToggle">菜单 ☰</button>
+            <div class="siderbar" id="sidebar">
+                <ul class="sider" id="leftmenu0">
+                    <!-- 左侧导航菜单将由JS动态生成 -->
+                </ul>
+            </div>
+        </div>
+        <div class="content" id="mcont0">
+            <!-- 内容区域将由JS动态生成 -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col">
+                    <h3>关于我们</h3>
+                    <p></p>
+                </div>
+                <div class="col">
+                    <h3>联系方式</h3>
+                    <p>地址：山东省淄博市张店区新村西路266号</p>
+                    <p>邮编：255000</p>
+                    <p>电话：0533-2786633</p>
+                    <p>邮箱：youthol@163.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2001-<script>document.write(new Date().getFullYear())</script> 山东理工大学青春在线 版权所有</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">↑</div>
+    
+    <script>
+        // 返回顶部按钮功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            // 滚动检测
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            // 点击返回顶部
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+ <img src="/_visitcount?siteId=49&type=2&columnId=6995" style="display:none" width="0" height="0"/>

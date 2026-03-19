@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaDataStructure_Level2/JavaDataStructure_Level2.iml" filepath="$PROJECT_DIR$/JavaDataStructure_Level2/JavaDataStructure_Level2.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaEE/JavaEE.iml" filepath="$PROJECT_DIR$/JavaEE/JavaEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE_plus/JavaEE_plus.iml" filepath="$PROJECT_DIR$/JavaEE_plus/JavaEE_plus.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_learning.iml" filepath="$PROJECT_DIR$/Java_learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/TextCode/TextCode.iml" filepath="$PROJECT_DIR$/TextCode/TextCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/test_review/test_review.iml" filepath="$PROJECT_DIR$/test_review/test_review.iml" />

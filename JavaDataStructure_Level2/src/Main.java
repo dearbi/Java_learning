@@ -1,20 +1,27 @@
-import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Stack;
 import java.util.Scanner;
+
 public class Main {
-	static Scanner cin=new Scanner(System.in);
-	static final int N=(int)(5e5+10);
-public static void main(String[] args) {
-	int n=cin.nextInt();
-	String[] a=new String[n];
-	for(int i=0;i<n;i++){
-		a[i]=cin.next();
+	static Scanner cin = new Scanner(System.in);
+	public static void main(String[] args) {
+		int m= cin.nextInt();
+		for(int i=0;i<m;i++){
+			Stack<Integer> stack=new Stack<>();
+			int x= cin.nextInt();
+			while(x!=-1){
+				stack.push(x);
+				x=cin.nextInt();
+			}
+
+			int size=stack.size();
+			for(int j=0;j< size;j++){
+				System.out.print(stack.pop());
+				if(j!=size-1){
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
 	}
-	Arrays.sort(a,(x,y)->{
-		return (x+y).compareTo(y+x);
-	});
-	for(int i=0;i<n;i++){
-		System.out.print(a[i]);
-	}
-	cin.close();
-}
 }
