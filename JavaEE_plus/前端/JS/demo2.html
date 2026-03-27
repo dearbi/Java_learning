@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="userName" value="admin">
+    <div>我是一个div</div>
+    <button type="button">点击有惊喜</button>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        $('button').click(function(){
+            let userName = $('#userName').val();//val没有参数,表示取值
+            console.log('点击了按钮，用户名是：' + userName);
+
+
+            $("#userName").val("hhh,我变了（）");//val有参数,表示赋值
+
+            let div=$("div").text();//text没有参数,表示取值
+            console.log(div);
+            let div3=$("div").text("我是一个div");//text有参数,表示赋值
+            console.log(div3);
+
+            let getSrc=$("button").attr("src");
+            console.log(getSrc);
+        });
+    </script>
+</body>
+</html>

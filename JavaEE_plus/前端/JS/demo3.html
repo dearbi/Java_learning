@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="font-size: 36px;">我是一个文本</div>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        $("div").click(function(){
+            // 设置css
+            $(this).css("font-size","48px");
+
+            // 获取css
+            let fontSize=$(this).css("font-size");
+            console.log(fontSize);
+        })
+
+        
+
+    </script>
+</body>
+</html>
