@@ -7,10 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="maven-demo" />
+        <module name="springboot-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JavaEE_plus" target="21" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-demo" options="-parameters" />
+    </option>
   </component>
 </project>
