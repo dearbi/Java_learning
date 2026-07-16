@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="maven-demo" />
         <module name="springboot-demo" />
+        <module name="SpringMVC_demo1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringMVC_demo1" options="-parameters" />
       <module name="springboot-demo" options="-parameters" />
     </option>
   </component>
