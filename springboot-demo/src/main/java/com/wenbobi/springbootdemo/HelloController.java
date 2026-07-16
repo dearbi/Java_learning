@@ -24,4 +24,7 @@ public class HelloController {
     public String hello4() {
         return "只支持POST";
     }
+
+
+
 }

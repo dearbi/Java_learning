@@ -1,77 +1,72 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+/**
+ https://www.lanqiao.cn/courses/52478/learning/?id=4185473&compatibility=false
+ **/
 
 public class Main {
-	static int[] parent;
-	static int[] rank;
+	static class Pair{
+		int first;
+		int second;
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-
-		int N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
-
-		parent = new int[N + 1];
-		rank = new int[N + 1];
-		for (int i = 1; i <= N; i++) {
-			parent[i] = i;
-			rank[i] = 0;
+		public Pair(int first, int second) {
+			this.first = first;
+			this.second = second;
 		}
-
-		for (int i = 0; i < M; i++) {
-			st = new StringTokenizer(br.readLine());
-
-			if (st.hasMoreTokens()) {
-				int count = Integer.parseInt(st.nextToken());
-
-				if (count > 0) {
-					int firstStudent = Integer.parseInt(st.nextToken());
-
-					for (int j = 1; j < count; j++) {
-						int nextStudent = Integer.parseInt(st.nextToken());
-						union(firstStudent, nextStudent);
-					}
-				}
-			}
-		}
-
-		int[] groupSize = new int[N + 1];
-		int maxFriends = 0;
-
-		for (int i = 1; i <= N; i++) {
-			int root = find(i);
-			groupSize[root]++;
-			if (groupSize[root] > maxFriends) {
-				maxFriends = groupSize[root];
-			}
-		}
-
-		System.out.println(maxFriends);
 	}
+	static  Scanner cin=new Scanner(System.in);
+	public static void main(String[] args) {
+		int k=cin.nextInt();
+		int n=cin.nextInt();
 
-	public static int find(int x) {
-		if (parent[x] != x) {
-			parent[x] = find(parent[x]);
+		int[] a=new int[k+1];//a[i]：第i个怪物初次击败所需的值
+		int[] b=new int[k+1];//a[i]：第i个怪物第二次击败所需的值
+
+		for(int i=1;i<=k;i++){
+			a[i]=cin.nextInt();
+			b[i]=cin.nextInt();
 		}
-		return parent[x];
-	}
 
-	public static void union(int x, int y) {
-		int rootX = find(x);
-		int rootY = find(y);
+		PriorityQueue<Pair> q=new PriorityQueue<>((x,y)->Integer.compare(x.first,y.first));
 
-		if (rootX != rootY) {
-			if (rank[rootX] < rank[rootY]) {
-				parent[rootX] = rootY;
-			} else if (rank[rootX] > rank[rootY]) {
-				parent[rootY] = rootX;
-			} else {
-				parent[rootY] = rootX;
-				rank[rootX]++;
+		int ans1=0;
+		int ans2=0;
+
+		//情况一：不挑战第k个怪物
+		//将前k-1个怪物的初始状态a[i]放入优先队列
+		for(int i=1;i<k;i++){
+			q.offer(new Pair(a[i],i));
+		}
+
+		int temp=n;
+		while(temp>0){
+			Pair x=q.poll();
+			ans1+=x.first;
+			q.offer(new Pair(b[x.second],x.second));
+			temp--;
+		}
+
+		//挑战最后一个怪物
+		if(n>=k){
+			ans2=0;
+			q.clear();
+
+			for(int i=1;i<=k;i++){
+				ans2+=a[i];
+				q.offer(new Pair(b[i],i));
 			}
+
+			n-=k;
+			while(n>0){
+				Pair x=q.poll();
+				ans2+=x.first;
+				q.offer(new Pair(b[x.second],x.second));
+				n--;
+			}
+
 		}
+
+		System.out.println(Math.min(ans1,ans2));
+
 	}
 }
