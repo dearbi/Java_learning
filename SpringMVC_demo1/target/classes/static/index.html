@@ -17,8 +17,8 @@
         $.ajax({
             url:"/user/getLoginUser",
             type:"get",
-            success:function(user1Name){
-                $("#loginUser").text(user1Name)//显示登录人
+            success:function(userName){
+                $("#loginUser").text(userName)//显示登录人
             }
         })
 
