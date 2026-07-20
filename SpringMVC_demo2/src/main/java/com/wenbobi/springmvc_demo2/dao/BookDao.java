@@ -1,6 +1,7 @@
 package com.wenbobi.springmvc_demo2.dao;
 
 import com.wenbobi.springmvc_demo2.model.BookInfo;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+@Component
 public class BookDao {
     public List<BookInfo> mockBookData() {
         List<BookInfo> bookInfos=new ArrayList<>(15);

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-demo" />
+        <module name="Spring-ioc-demo1" />
         <module name="maven-demo" />
         <module name="SpringMVC_demo2" />
         <module name="SpringMVC_demo1" />
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-ioc-demo1" options="-parameters" />
       <module name="SpringMVC_demo1" options="-parameters" />
       <module name="SpringMVC_demo2" options="-parameters" />
       <module name="springboot-demo" options="-parameters" />
