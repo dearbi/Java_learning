@@ -4,11 +4,12 @@ import com.wenbobi.springmvc_demo2.dao.BookDao;
 import com.wenbobi.springmvc_demo2.model.BookInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Component
+@Service
 public class BookService {
     @Autowired
     private BookDao bookDao;
