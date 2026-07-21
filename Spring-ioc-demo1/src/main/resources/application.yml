@@ -1,9 +1,18 @@
 server:
   port: 9091
 
-spring:
-  datasource:
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springiocdemo1?useSSL=false&serverTimezone=UTC
+#spring:
+#  datasource:
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/springiocdemo1?useSSL=false&serverTimezone=UTC
+
+string:
+  hello: wenbobi
+
+
+student:
+  id:1
+  name:wenbobi
+  age:18
