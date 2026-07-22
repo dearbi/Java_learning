@@ -4,11 +4,13 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+import java.util.Map;
+
 @Configuration
-@ConfigurationProperties(prefix = "student")
+@ConfigurationProperties(prefix = "dbtypes")
 @Data
-public class Student {
-    private Integer id;
-    private String name;
-    private Integer age;
+public class Dbtypes {
+    private List<String> name;
+    private Map<String,String> map;
 }

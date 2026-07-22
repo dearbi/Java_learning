@@ -10,6 +10,7 @@
         <module name="springboot-demo" />
         <module name="Spring-ioc-demo1" />
         <module name="maven-demo" />
+        <module name="captcha-demo" />
         <module name="SpringMVC_demo2" />
         <module name="SpringMVC_demo1" />
       </profile>
@@ -23,6 +24,7 @@
       <module name="Spring-ioc-demo1" options="-parameters" />
       <module name="SpringMVC_demo1" options="-parameters" />
       <module name="SpringMVC_demo2" options="-parameters" />
+      <module name="captcha-demo" options="-parameters" />
       <module name="springboot-demo" options="-parameters" />
     </option>
   </component>

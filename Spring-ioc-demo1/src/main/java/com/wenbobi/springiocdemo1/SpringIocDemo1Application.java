@@ -13,9 +13,9 @@ public class SpringIocDemo1Application {
         ApplicationContext context = SpringApplication.run(SpringIocDemo1Application.class, args);
 
         //适用场景：该类型只有一个对象
-        UserController bean = context.getBean(UserController.class);
-        System.out.println(bean);
-        bean.print();
+//        UserController bean = context.getBean(UserController.class);
+//        System.out.println(bean);
+//        bean.print();
 //
 //		UserController bean1 = (UserController) context.getBean("aa");
 //		bean1.print();

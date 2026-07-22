@@ -13,6 +13,15 @@ string:
 
 
 student:
-  id:1
-  name:wenbobi
-  age:18
+  id: 1
+  name: wenbobi
+  age: 18
+
+dbtypes:
+  name:
+    - mysql
+    - sqlserver
+    - db2
+  map:
+    k1: v1
+    k2: v2
