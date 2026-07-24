@@ -9,3 +9,13 @@ captcha:
   session:
     code: captchaCode
     date: captchaDate
+
+
+logging:
+  level:
+    root: info
+    com:
+      wenbobi:
+        captchademo: trace
+  file:
+    name: D:/java_code/Java_learning/captcha-demo/springboot.log

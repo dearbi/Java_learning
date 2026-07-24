@@ -60,9 +60,12 @@ public class CaptchaController {
             return false;
         }
         String savedCaptchaCode = (String) session.getAttribute(captchaProperties.getSession().getCode());
-        long time = (long) session.getAttribute(captchaProperties.getSession().getDate());//获取验证码生成的时间
+        Date savedCaptchaDate = (Date) session.getAttribute(captchaProperties.getSession().getDate());
+        if(savedCaptchaCode == null || savedCaptchaDate == null){
+            return false;
+        }
         if(captcha.equalsIgnoreCase(savedCaptchaCode)){
-            if(System.currentTimeMillis() - time < VALID_MILLS_TIME){
+            if(System.currentTimeMillis() - savedCaptchaDate.getTime() < VALID_MILLS_TIME){
                 return true;
             }
         }

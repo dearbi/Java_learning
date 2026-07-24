@@ -7,16 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-demo" />
+      </profile>
+      <profile name="Annotation profile for mybatis-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="mybatis-demo" />
         <module name="Spring-ioc-demo1" />
-        <module name="maven-demo" />
-        <module name="captcha-demo" />
-        <module name="SpringMVC_demo2" />
-        <module name="SpringMVC_demo1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="captcha-demo" target="17" />
       <module name="JavaEE_plus" target="21" />
+      <module name="maven-demo" target="21" />
+      <module name="springboot-demo" target="17" />
+      <module name="SpringMVC_demo1" target="17" />
+      <module name="SpringMVC_demo2" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -25,6 +35,7 @@
       <module name="SpringMVC_demo1" options="-parameters" />
       <module name="SpringMVC_demo2" options="-parameters" />
       <module name="captcha-demo" options="-parameters" />
+      <module name="mybatis-demo" options="-parameters" />
       <module name="springboot-demo" options="-parameters" />
     </option>
   </component>

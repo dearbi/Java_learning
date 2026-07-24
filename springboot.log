@@ -1,0 +1,20 @@
+2026-07-23T11:45:41.349+08:00  INFO 39632 --- [captcha-demo] [main] c.w.captchademo.CaptchaDemoApplication   : Starting CaptchaDemoApplication using Java 21.0.5 with PID 39632 (D:\java_code\Java_learning\captcha-demo\target\classes started by 21994 in D:\java_code\Java_learning)
+2026-07-23T11:45:41.351+08:00 DEBUG 39632 --- [captcha-demo] [main] c.w.captchademo.CaptchaDemoApplication   : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-23T11:45:41.352+08:00  INFO 39632 --- [captcha-demo] [main] c.w.captchademo.CaptchaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-07-23T11:45:41.902+08:00  INFO 39632 --- [captcha-demo] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-23T11:45:41.913+08:00  INFO 39632 --- [captcha-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-23T11:45:41.914+08:00  INFO 39632 --- [captcha-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-23T11:45:41.965+08:00  INFO 39632 --- [captcha-demo] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 582 ms
+2026-07-23T11:45:42.032+08:00  INFO 39632 --- [captcha-demo] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-07-23T11:45:42.189+08:00  INFO 39632 --- [captcha-demo] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-23T11:45:42.191+08:00  INFO 39632 --- [captcha-demo] [main] c.w.captchademo.CaptchaDemoApplication   : Started CaptchaDemoApplication in 1.24 seconds (process running for 1.745)
+2026-07-23T11:46:07.848+08:00  INFO 39632 --- [captcha-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23T11:46:07.848+08:00  INFO 39632 --- [captcha-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-23T11:46:07.850+08:00  INFO 39632 --- [captcha-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-23T11:46:07.908+08:00 ERROR 39632 --- [captcha-demo] [http-nio-8080-exec-1] c.w.c.controller.LogController           : 我是ERROR级别日志
+2026-07-23T11:46:07.909+08:00  WARN 39632 --- [captcha-demo] [http-nio-8080-exec-1] c.w.c.controller.LogController           : 我是WARN级别日志
+2026-07-23T11:46:07.909+08:00  INFO 39632 --- [captcha-demo] [http-nio-8080-exec-1] c.w.c.controller.LogController           : 我是打印的日志
+2026-07-23T11:46:07.910+08:00 DEBUG 39632 --- [captcha-demo] [http-nio-8080-exec-1] c.w.c.controller.LogController           : 我是DEBUG级别日志
+2026-07-23T11:46:07.910+08:00 TRACE 39632 --- [captcha-demo] [http-nio-8080-exec-1] c.w.c.controller.LogController           : 我是TRACE级别日志
+2026-07-23T11:46:57.060+08:00  INFO 39632 --- [captcha-demo] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-23T11:46:57.064+08:00  INFO 39632 --- [captcha-demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
