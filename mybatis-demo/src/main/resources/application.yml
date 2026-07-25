@@ -10,3 +10,5 @@ spring:
 mybatis:
   configuration: # 配置日志志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true # 配置驼峰⾃动转换
+  mapper-locations: classpath:/mapper/**Mapper.xml # 配置mapper文件位置

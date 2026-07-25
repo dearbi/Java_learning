@@ -1,9 +1,14 @@
 package com.wenbobi.mybatisdemo.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Date;
 
+
+@NoArgsConstructor
 @Data
 public class UserInfo {
     /*        `id` INT ( 11 ) NOT NULL AUTO_INCREMENT,
@@ -24,4 +29,10 @@ public class UserInfo {
     private Integer deleteFlag;
     private Date createTime;
     private Date updateTime;
+
+    public UserInfo(String username, String password, Integer age) {
+        this.username = username;
+        this.password = password;
+        this.age = age;
+    }
 }

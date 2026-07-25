@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenbobi.mybatisdemo.mapper.UserInfoMapperXML">
+    <insert id="insert">
+        INSERT INTO `user_info` (username,password,age)
+        VALUES (#{username}, #{password}, #{age})
+    </insert>
+    <select id="getList" resultType="com.wenbobi.mybatisdemo.model.UserInfo">
+        SELECT * from `user_info`
+    </select>
+    <select id="getUserInfoById" resultType="com.wenbobi.mybatisdemo.model.UserInfo">
+        SELECT * from `user_info` where `id` = #{id}
+    </select>
+
+</mapper>
