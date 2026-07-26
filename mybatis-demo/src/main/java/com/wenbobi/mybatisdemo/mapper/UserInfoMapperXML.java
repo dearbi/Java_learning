@@ -28,4 +28,6 @@ public interface UserInfoMapperXML {
     List<UserInfo> queryByCondition(UserInfo userInfo);
 
 
+    Integer batchDelete(List<Integer> ids);
+
 }

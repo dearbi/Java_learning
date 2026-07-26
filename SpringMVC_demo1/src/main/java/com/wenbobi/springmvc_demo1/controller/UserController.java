@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")
-public class userController {
+public class UserController {
     @RequestMapping("/login")
     public Boolean login(String userName, String password, HttpSession session) {
         if(!StringUtils.hasText(userName) || !StringUtils.hasText(password)) {

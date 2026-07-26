@@ -50,4 +50,10 @@ class UserInfoMapperXMLTest {
 //        userInfo.setDeleteFlag(0);
         System.out.println(userInfoMapperXML.queryByCondition(userInfo));
     }
+
+    @Test
+    void batchDelete() {
+        userInfoMapperXML.batchDelete(List.of(14,15,16,17));
+        System.out.println(userInfoMapperXML.getList());
+    }
 }

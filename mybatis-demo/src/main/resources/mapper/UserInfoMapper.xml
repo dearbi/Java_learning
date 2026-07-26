@@ -34,6 +34,12 @@
         )
 
     </insert>
+    <delete id="batchDelete">
+        DELETE FROM `user_info` WHERE id IN
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </delete>
     <select id="getList" resultType="com.wenbobi.mybatisdemo.model.UserInfo">
         select * from `user_info`
     </select>
