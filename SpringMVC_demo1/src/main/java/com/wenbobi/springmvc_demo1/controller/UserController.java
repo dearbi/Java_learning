@@ -1,4 +1,4 @@
-package com.wenbobi.springmvc_demo1;
+package com.wenbobi.springmvc_demo1.controller;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.util.StringUtils;

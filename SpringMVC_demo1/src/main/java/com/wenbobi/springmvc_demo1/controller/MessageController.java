@@ -1,6 +1,9 @@
-package com.wenbobi.springmvc_demo1;
+package com.wenbobi.springmvc_demo1.controller;
 
 
+import com.wenbobi.springmvc_demo1.model.MessageInfo;
+import com.wenbobi.springmvc_demo1.service.MessageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +17,13 @@ import java.util.List;
 public class MessageController {
     List<MessageInfo> messageInfoList=new ArrayList<>();
 
+    @Autowired
+    private MessageService messageService;
+
+
     @RequestMapping("/getList")
     public List<MessageInfo> getList() {
-        return messageInfoList;
+        return messageService.getList();
     }
 
     @RequestMapping(value = "/publish",produces = "application/json")
@@ -27,7 +34,10 @@ public class MessageController {
                 !StringUtils.hasText(messageInfo.getMessage())){
             return "{\"ok\":0}";
         }
-        messageInfoList.add(messageInfo);
-        return "{\"ok\":1}";
+        Integer result=messageService.insertMessage(messageInfo);
+        if(result==1) {
+            return "{\"ok\":1}";
+        }
+        return "{\"ok\":0}";
     }
 }

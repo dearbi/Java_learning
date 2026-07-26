@@ -1,4 +1,4 @@
-package com.wenbobi.springmvc_demo1;
+package com.wenbobi.springmvc_demo1.model;
 
 import lombok.*;
 
