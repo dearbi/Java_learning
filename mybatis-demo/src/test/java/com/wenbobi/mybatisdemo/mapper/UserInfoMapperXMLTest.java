@@ -30,4 +30,24 @@ class UserInfoMapperXMLTest {
         userInfoMapperXML.insert(new UserInfo("test","123456",18));
         System.out.println(userInfoMapperXML.getList());
     }
+
+    @Test
+    void insertUserInfoByCondition() {
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUsername("niuxxbi");
+        userInfo.setPassword("niubi666");
+        userInfo.setAge(18);
+        userInfo.setGender(1);
+        userInfoMapperXML.insertUserInfoByCondition(userInfo);
+        System.out.println(userInfoMapperXML.getList());
+    }
+
+    @Test
+    void queryByCondition() {
+        UserInfo userInfo=new UserInfo();
+//        userInfo.setAge(18);
+        userInfo.setGender(1);
+//        userInfo.setDeleteFlag(0);
+        System.out.println(userInfoMapperXML.queryByCondition(userInfo));
+    }
 }

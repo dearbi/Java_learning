@@ -28,5 +28,8 @@ public interface UserInfoMapper {
     @Update("UPDATE `user_info` SET `username` = #{username} WHERE `id` = #{id}")
     Integer update(UserInfo userInfo);
 
+    @Select("SELECT * from user_info order by id ${order}")
+    List<UserInfo> getListByOrder(String order);
+
 
 }

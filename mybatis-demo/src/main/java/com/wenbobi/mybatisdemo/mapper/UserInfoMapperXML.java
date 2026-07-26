@@ -23,5 +23,9 @@ public interface UserInfoMapperXML {
 //
 //    Integer update(UserInfo userInfo);
 
+    Integer insertUserInfoByCondition(UserInfo userInfo);
+
+    List<UserInfo> queryByCondition(UserInfo userInfo);
+
 
 }

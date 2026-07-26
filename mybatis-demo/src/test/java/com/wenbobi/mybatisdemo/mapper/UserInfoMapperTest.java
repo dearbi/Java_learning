@@ -52,4 +52,10 @@ class UserInfoMapperTest {
         userInfoMapper.update(userInfo);
         System.out.println("更新的行数："+userInfoMapper.update(userInfo));
     }
+
+    @Test
+    void getListByOrder() {
+        List<UserInfo> list = userInfoMapper.getListByOrder("asc");
+        System.out.println(list);
+    }
 }

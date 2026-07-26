@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wenbobi.mybatisdemo.mapper.UserInfoMapperXML">
+    <resultMap id="BaseMap" type="com.wenbobi.mybatisdemo.model.UserInfo">
+        <id column="id" property="id" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="age" property="age" />
+        <result column="delete_flag" property="deleteFlag" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
     <insert id="insert">
         INSERT INTO `user_info` (username,password,age)
         VALUES (#{username}, #{password}, #{age})
     </insert>
+    <insert id="insertUserInfoByCondition">
+        INSERT INTO `user_info` (
+            <trim suffixOverrides=",">
+                <if test="username != null">username,</if>
+                <if test="password != null">password,</if>
+                <if test="age != null">age,</if>
+                <if test="gender != null">gender</if>
+            </trim>)
+        VALUES (
+                <trim suffixOverrides=",">
+                    <if test="username != null">#{username},</if>
+                    <if test="password != null">#{password},</if>
+                    <if test="age != null">#{age},</if>
+                    <if test="gender != null">#{gender}
+                    </if>
+                </trim>
+        )
+
+    </insert>
     <select id="getList" resultType="com.wenbobi.mybatisdemo.model.UserInfo">
-        SELECT * from `user_info`
+        select * from `user_info`
     </select>
     <select id="getUserInfoById" resultType="com.wenbobi.mybatisdemo.model.UserInfo">
         SELECT * from `user_info` where `id` = #{id}
+    </select>
+    <select id="queryByCondition" resultType="com.wenbobi.mybatisdemo.model.UserInfo">
+<!--        SELECT *-->
+<!--        FROM user_info-->
+<!--        WHERE-->
+<!--        <trim prefixOverrides="AND">-->
+<!--            <if test="age != null">-->
+<!--                age = #{age}-->
+<!--            </if>-->
+<!--             <if test="gender != null">-->
+<!--                 AND gender = #{gender}-->
+<!--            </if>-->
+<!--             <if test="deleteFlag != null">-->
+<!--                 AND delete_flag = #{deleteFlag}-->
+<!--        </if>-->
+<!--        </trim>-->
+
+
+        SELECT *
+        FROM user_info
+        <where>
+            <if test="age != null">
+                age = #{age}
+            </if>
+            <if test="gender != null">
+                AND gender = #{gender}
+            </if>
+            <if test="deleteFlag != null">
+                AND delete_flag = #{deleteFlag}
+            </if>
+        </where>
     </select>
 
 </mapper>

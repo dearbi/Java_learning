@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenbobi.mybatisdemo.mapper.ArticleInfoMapper">
+
+    <select id="getArticleInfoById" resultType="com.wenbobi.mybatisdemo.model.ArticleInfo">
+        select ta.*, tb.username,tb.age from article_info ta
+                                                 left join
+                                             user_info tb on ta.uid = tb.id
+        where ta.id = #{id}
+    </select>
+</mapper>
