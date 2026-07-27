@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: book-demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/book_test?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: "0614"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #配置驼峰⾃动转换
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
+
+# 设置⽇志⽂件的⽂件名
+logging:
+  file:
+    name: spring-book.log

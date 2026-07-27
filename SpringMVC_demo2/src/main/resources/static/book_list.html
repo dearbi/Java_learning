@@ -39,7 +39,7 @@
         </tr>
         </thead>
         <tbody>
-        //数据从数据库中获取
+<!--        数据从数据库中获取-->
         </tbody>
     </table>
 
@@ -52,8 +52,9 @@
         function getBookList() {
             $.ajax({
                 type: "get",
-                url: "book/getList",
-                success: function (books) {
+                url: "book/getPageList"+location.search,
+                success: function (result) {
+                    let books = result.records;
                     let finalHTML = "";
                     for (let book of books) {
                         finalHTML += `

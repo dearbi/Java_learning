@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-demo" />
+        <module name="SpringMVC_demo2" />
         <module name="SpringMVC_demo1" />
       </profile>
       <profile name="Annotation profile for mybatis-demo" enabled="true">
@@ -26,7 +27,6 @@
       <module name="captcha-demo" target="17" />
       <module name="JavaEE_plus" target="21" />
       <module name="maven-demo" target="21" />
-      <module name="SpringMVC_demo2" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
