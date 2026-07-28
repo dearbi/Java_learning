@@ -12,6 +12,8 @@ import java.util.List;
 @Data
 @RequiredArgsConstructor
 public class PageResponse<T> {
+
+
     private final Integer total;
     private List<T> records;
 

@@ -18,14 +18,14 @@ public class BookService {
     @Autowired
     private BookDao bookDao;
 
-    public List<BookInfo> getList() {
-//        BookDao bookDao=new BookDao();
-        List<BookInfo> bookInfos = bookDao.mockBookData();
-        for (BookInfo bookInfo : bookInfos) {
-            bookInfo.setStatusCN(bookInfo.getStatus() == 1 ? "允许借阅" : "不允许借阅");
-        }
-        return bookInfos;
-    }
+//    public List<BookInfo> getList() {
+//       BookDao bookDao=new BookDao();
+//        List<BookInfo> bookInfos = bookDao.mockBookData();
+//        for (BookInfo bookInfo : bookInfos) {
+//            bookInfo.setStatusCN(bookInfo.getStatus() == 1 ? "允许借阅" : "不允许借阅");
+//        }
+//        return bookInfos;
+//    }
 
     @Autowired
     private BookInfoMapper bookInfoMapper;
@@ -47,5 +47,24 @@ public class BookService {
             bookInfo.setStatusCN(BookStatus.getNameByCode(bookInfo.getStatus()).getName());
         }
         return new PageResponse<>(count, bookInfos);
+    }
+
+    public BookInfo queryBookId(Integer bookId) {
+        return bookInfoMapper.queryBookId(bookId);
+    }
+
+    public Integer updateBook(BookInfo bookInfo) {
+        return bookInfoMapper.updateBook(bookInfo);
+    }
+
+    public void deleteBook(Integer bookId) {
+        BookInfo bookInfo = new BookInfo();
+        bookInfo.setId(bookId);
+        bookInfo.setStatus(BookStatus.DELETED.getCode());
+        bookInfoMapper.updateBook(bookInfo);
+    }
+
+    public void batchDelete(List<Integer> ids) {
+        bookInfoMapper.batchDelete(ids);
     }
 }

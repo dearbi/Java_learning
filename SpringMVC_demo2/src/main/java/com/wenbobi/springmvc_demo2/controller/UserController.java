@@ -2,6 +2,7 @@ package com.wenbobi.springmvc_demo2.controller;
 
 import com.wenbobi.springmvc_demo2.service.UserService;
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/login")
-    public boolean login(String name, String password) {
+    public boolean login(String name, String password, HttpSession session) {
         /**
          * 1. 参数校验
          * 2. 验证密码
@@ -37,7 +38,8 @@ public class UserController {
 //            return true;
 //        }
 
-        return userService.checkPassword(name, password);
+
+        return userService.checkPassword(name, password,session);
 
     }
 }

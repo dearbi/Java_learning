@@ -59,10 +59,59 @@
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script>
-        
+        getBookInfo();
+        function getBookInfo(){
+            // 先从URL中同步获取bookId，避免异步请求未完成时id为空
+            var bookId = null;
+            var params = location.search.substring(1).split('&');
+            for (var i = 0; i < params.length; i++) {
+                var pair = params[i].split('=');
+                if (pair[0] === 'bookId' && pair[1]) {
+                    bookId = pair[1];
+                    break;
+                }
+            }
+            if (bookId) {
+                $("#bookId").val(bookId);
+            }
+
+            $.ajax({
+                type: "post",
+                url: "book/queryBookId" + location.search,
+                success: function (bookInfo) {
+                    if (bookInfo && bookInfo.id) {
+                        $("#bookId").val(bookInfo.id);
+                    }
+                    $("#bookName").val(bookInfo.bookName);
+                    $("#bookAuthor").val(bookInfo.author);
+                    $("#bookStock").val(bookInfo.count);
+                    $("#bookPrice").val(bookInfo.price);
+                    $("#bookPublisher").val(bookInfo.publish);
+                    $("#bookStatus").val(bookInfo.status);
+                },
+                error: function () {
+                    alert("获取图书信息失败");
+                }
+            })
+        }
+
         function update() {
-            alert("更新成功");
-            location.href = "book_list.html"
+            // alert("更新成功");
+            // location.href = "book_list.html"
+
+            $.ajax({
+                type: "post",
+                url: "book/updateBook",
+                data: $("#updateBook").serialize(),
+                success: function (result) {
+                    if(result == "success"){
+                        alert(result);
+                        location.href = "book_list.html";
+                    }else{
+                        alert(result);
+                    }
+                }
+            })
         }
     </script>
 </body>

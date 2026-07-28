@@ -10,6 +10,7 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true #配置驼峰⾃动转换
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
+  mapper-locations: classpath:mapper/**.xml #配置mapper文件的位置
 
 # 设置⽇志⽂件的⽂件名
 logging:

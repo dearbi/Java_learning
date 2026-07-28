@@ -6,12 +6,13 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+
 public enum BookStatus {
     DELETED(0,"无效"),
     NORMAL(1,"正常"),
     FORBIDDEN(2,"不允许借阅");
     private int code;
-    @Getter
     private String name;
 
 

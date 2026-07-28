@@ -1,0 +1,8 @@
+2026-07-27T15:04:08.720+08:00  INFO 60168 --- [SpringMVC_demo2] [main] c.w.s.mapper.UserInfoMapperTest          : Starting UserInfoMapperTest using Java 21.0.5 with PID 60168 (started by 21994 in D:\java_code\Java_learning\SpringMVC_demo2)
+2026-07-27T15:04:08.725+08:00  INFO 60168 --- [SpringMVC_demo2] [main] c.w.s.mapper.UserInfoMapperTest          : No active profile set, falling back to 1 default profile: "default"
+2026-07-27T15:04:10.525+08:00  INFO 60168 --- [SpringMVC_demo2] [main] c.w.s.mapper.UserInfoMapperTest          : Started UserInfoMapperTest in 2.14 seconds (process running for 4.679)
+2026-07-27T15:04:12.306+08:00  INFO 60168 --- [SpringMVC_demo2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-27T15:04:12.479+08:00  INFO 60168 --- [SpringMVC_demo2] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13137835
+2026-07-27T15:04:12.481+08:00  INFO 60168 --- [SpringMVC_demo2] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-27T15:04:12.581+08:00  INFO 60168 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-27T15:04:12.589+08:00  INFO 60168 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
