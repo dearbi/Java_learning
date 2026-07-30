@@ -71,11 +71,16 @@
                 url: "book/addBook",
                 data:$("#addBook").serialize(),
                 success: function (result) {
-                    if(result=="success"){
+                    if (result.code === -1) {
+                        alert("请先登录！");
+                        location.href = "login.html";
+                        return;
+                    }
+                    if(result.code === 200){
                         alert("添加成功");
                         location.href = "book_list.html";
                     } else {
-                        alert("添加失败");
+                        alert(result.errMsg || "添加失败");
                     }
                 }
             })

@@ -1,25 +1,17 @@
 package com.wenbobi.springmvc_demo2.controller;
 
-import ch.qos.logback.core.util.StringUtil;
-import com.wenbobi.springmvc_demo2.dao.BookDao;
-import com.wenbobi.springmvc_demo2.enums.BookStatus;
 import com.wenbobi.springmvc_demo2.enums.ResultCode;
 import com.wenbobi.springmvc_demo2.model.*;
 import com.wenbobi.springmvc_demo2.service.BookService;
-import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 @Slf4j
 @RestController
@@ -36,21 +28,9 @@ public class BookController {
 //    }
 
     @RequestMapping("/getPageList")
-    public Result<PageResponse<BookInfo>> getPageList(PageRequest pageRequest, HttpSession session) {
-        UserInfo userInfo = (UserInfo) session.getAttribute("userInfo");
-        if(userInfo==null||userInfo.getId()<1 ){
-            log.info("用户未登录");
-            Result result=new Result();
-            result.setCode(ResultCode.UNLOGIN.getCode());
-            result.setErrMsg("用户未登录");
-            return result;
-        }
+    public Result<PageResponse<BookInfo>> getPageList(PageRequest pageRequest) {
         log.info("查询图书列表,pageRequest={}", pageRequest);
         PageResponse<BookInfo> response = bookService.getListByPage(pageRequest);
-        Result result=new Result();
-        result.setCode(ResultCode.SUCCESS.getCode());
-        result.setErrMsg("success");
-        result.setData(response);
         return ResultCode.success(response);
     }
 

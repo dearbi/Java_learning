@@ -11,14 +11,14 @@
         <module name="SpringMVC_demo2" />
         <module name="SpringMVC_demo1" />
       </profile>
-      <profile name="Annotation profile for mybatis-demo" enabled="true">
+      <profile name="Annotation profile for mybatis-plus-demo" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="mybatis-plus-demo" />
         <module name="mybatis-demo" />
         <module name="Spring-ioc-demo1" />
       </profile>
@@ -36,6 +36,7 @@
       <module name="SpringMVC_demo2" options="-parameters" />
       <module name="captcha-demo" options="-parameters" />
       <module name="mybatis-demo" options="-parameters" />
+      <module name="mybatis-plus-demo" options="-parameters" />
       <module name="springboot-demo" options="-parameters" />
     </option>
   </component>

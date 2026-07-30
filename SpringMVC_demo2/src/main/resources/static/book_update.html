@@ -79,6 +79,11 @@
                 type: "post",
                 url: "book/queryBookId" + location.search,
                 success: function (bookInfo) {
+                    if (bookInfo.code === -1) {
+                        alert("请先登录！");
+                        location.href = "login.html";
+                        return;
+                    }
                     if (bookInfo && bookInfo.id) {
                         $("#bookId").val(bookInfo.id);
                     }
@@ -104,6 +109,11 @@
                 url: "book/updateBook",
                 data: $("#updateBook").serialize(),
                 success: function (result) {
+                    if (result.code === -1) {
+                        alert("请先登录！");
+                        location.href = "login.html";
+                        return;
+                    }
                     if(result == "success"){
                         alert(result);
                         location.href = "book_list.html";

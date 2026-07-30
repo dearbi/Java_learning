@@ -60,7 +60,13 @@
                 type: "get",
                 url: "book/getPageList" + location.search,
                 success: function (result) {
-                    let books = result.records;
+                    // 未登录则跳转到登录页
+                    if (result.code === -1) {
+                        alert("请先登录！");
+                        location.href = "login.html";
+                        return;
+                    }
+                    let books = result.data.records;
                     let finalHTML = "";
                     for (let book of books) {
                         finalHTML += `
@@ -84,7 +90,7 @@
 
                     //翻页信息
                     $("#pageContainer").jqPaginator({
-                        totalCounts: result.total, //总记录数
+                        totalCounts: result.data.total, //总记录数
                         pageSize: 10,    //每页的个数
                         visiblePages: 5, //可视页数
                         currentPage: currentPage,  //当前页码
@@ -117,6 +123,11 @@
                     type:"post",
                     url:"book/deleteBook?bookId=" + id,
                     success:function (result){
+                        if (result.code === -1) {
+                            alert("请先登录！");
+                            location.href = "login.html";
+                            return;
+                        }
                         if(result=="success"){
                             alert(result);
                             location.href="book_list.html"
@@ -144,6 +155,11 @@
                     url: "book/batchDelete",
                     data: { ids: ids.join(',') },
                     success: function (result) {
+                        if (result.code === -1) {
+                            alert("请先登录！");
+                            location.href = "login.html";
+                            return;
+                        }
                         alert(result == "success" ? "批量删除成功" : result);
                         if (result == "success") {
                             location.href = "book_list.html";
