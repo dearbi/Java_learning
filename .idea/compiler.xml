@@ -11,7 +11,7 @@
         <module name="SpringMVC_demo2" />
         <module name="SpringMVC_demo1" />
       </profile>
-      <profile name="Annotation profile for mybatis-plus-demo" enabled="true">
+      <profile name="Annotation profile for spring-trans" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -21,6 +21,7 @@
         <module name="mybatis-plus-demo" />
         <module name="mybatis-demo" />
         <module name="Spring-ioc-demo1" />
+        <module name="spring-trans" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,6 +38,7 @@
       <module name="captcha-demo" options="-parameters" />
       <module name="mybatis-demo" options="-parameters" />
       <module name="mybatis-plus-demo" options="-parameters" />
+      <module name="spring-trans" options="-parameters" />
       <module name="springboot-demo" options="-parameters" />
     </option>
   </component>

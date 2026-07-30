@@ -1,58 +1,20 @@
-2026-07-28T10:49:57.825+08:00  INFO 5744 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Starting SpringMvcDemo2Application using Java 21.0.5 with PID 5744 (D:\java_code\Java_learning\SpringMVC_demo2\target\classes started by 21994 in D:\java_code\Java_learning)
-2026-07-28T10:49:57.832+08:00  INFO 5744 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : No active profile set, falling back to 1 default profile: "default"
-2026-07-28T10:49:58.647+08:00  INFO 5744 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-07-28T10:49:58.658+08:00  INFO 5744 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-28T10:49:58.658+08:00  INFO 5744 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-07-28T10:49:58.721+08:00  INFO 5744 --- [SpringMVC_demo2] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 851 ms
-2026-07-28T10:49:59.244+08:00  INFO 5744 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-07-28T10:49:59.247+08:00  INFO 5744 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Started SpringMvcDemo2Application in 1.868 seconds (process running for 5.88)
-2026-07-28T10:50:02.650+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-28T10:50:02.650+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-07-28T10:50:02.651+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-07-28T10:50:06.927+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-5] c.w.s.controller.UserController          : 用户登录,name:admin
-2026-07-28T10:50:06.942+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-07-28T10:50:07.145+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1740a4b2
-2026-07-28T10:50:07.147+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-07-28T10:50:07.285+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-10] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T10:50:13.713+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T10:56:05.248+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-6] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T10:56:10.174+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-8] c.w.s.controller.BookController          : 查询图书状态，bookId=5
-2026-07-28T10:56:11.532+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-1] c.w.s.controller.BookController          : 更新图书，bookInfo=BookInfo(id=5, bookName=比格的牛比yyds, author=逼格, count=23, price=91, publish=出版社1, status=1, statusCN=null, createTime=null, updateTime=null)
-2026-07-28T10:56:12.517+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T10:56:14.345+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-5] c.w.s.controller.BookController          : 查询图书状态，bookId=2
-2026-07-28T10:56:17.515+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-2] c.w.s.controller.BookController          : 更新图书，bookInfo=BookInfo(id=2, bookName=平凡的世界2, author=路遥, count=5, price=98.56, publish=北京十月文艺出版社, status=2, statusCN=null, createTime=null, updateTime=null)
-2026-07-28T10:56:18.314+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-7] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T10:56:25.645+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-9] c.w.s.controller.BookController          : 批量删除图书，ids=2,5,7
-2026-07-28T10:56:26.961+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-1] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T10:56:29.289+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=2, pageSize=10, offset=10)
-2026-07-28T10:56:29.828+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-5] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=3, pageSize=10, offset=20)
-2026-07-28T10:56:30.940+08:00  INFO 5744 --- [SpringMVC_demo2] [http-nio-8080-exec-2] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=2, pageSize=10, offset=10)
-2026-07-28T11:00:55.834+08:00  INFO 5744 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-28T11:00:55.840+08:00  INFO 5744 --- [SpringMVC_demo2] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-07-28T11:00:55.845+08:00  INFO 5744 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-07-28T11:00:55.848+08:00  INFO 5744 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-07-28T11:01:03.381+08:00  INFO 43728 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Starting SpringMvcDemo2Application using Java 21.0.5 with PID 43728 (D:\java_code\Java_learning\SpringMVC_demo2\target\classes started by 21994 in D:\java_code\Java_learning)
-2026-07-28T11:01:03.384+08:00  INFO 43728 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : No active profile set, falling back to 1 default profile: "default"
-2026-07-28T11:01:04.289+08:00  INFO 43728 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-07-28T11:01:04.300+08:00  INFO 43728 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-28T11:01:04.300+08:00  INFO 43728 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-07-28T11:01:04.369+08:00  INFO 43728 --- [SpringMVC_demo2] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 940 ms
-2026-07-28T11:01:04.938+08:00  INFO 43728 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-07-28T11:01:04.941+08:00  INFO 43728 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Started SpringMvcDemo2Application in 2.069 seconds (process running for 2.748)
-2026-07-28T11:01:08.251+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-28T11:01:08.252+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-07-28T11:01:08.254+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-07-28T11:01:08.447+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-3] c.w.s.config.LoginInterceptor            : 用户未登录,请求被拦截: /book/getPageList
-2026-07-28T11:01:14.692+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.UserController          : 用户登录,name:admin
-2026-07-28T11:01:14.750+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-07-28T11:01:15.158+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c4ee9dd
-2026-07-28T11:01:15.161+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-07-28T11:01:15.433+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-9] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T11:01:17.103+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-7] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=2, pageSize=10, offset=10)
-2026-07-28T11:01:23.322+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-5] c.w.s.controller.BookController          : 添加图书，bookInfo=BookInfo(id=null, bookName=平凡的世界3, author=路遥, count=5, price=98.56, publish=北京十月文艺出版社, status=1, statusCN=null, createTime=null, updateTime=null)
-2026-07-28T11:01:24.324+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-6] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
-2026-07-28T11:01:26.227+08:00  INFO 43728 --- [SpringMVC_demo2] [http-nio-8080-exec-1] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=3, pageSize=10, offset=20)
-2026-07-28T11:48:26.646+08:00  INFO 43728 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-28T11:48:26.652+08:00  INFO 43728 --- [SpringMVC_demo2] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-07-28T11:48:26.657+08:00  INFO 43728 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-07-28T11:48:26.659+08:00  INFO 43728 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-30T15:00:02.759+08:00  INFO 45028 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Starting SpringMvcDemo2Application using Java 21.0.5 with PID 45028 (D:\java_code\Java_learning\SpringMVC_demo2\target\classes started by 21994 in D:\java_code\Java_learning)
+2026-07-30T15:00:02.777+08:00  INFO 45028 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : No active profile set, falling back to 1 default profile: "default"
+2026-07-30T15:00:04.658+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-30T15:00:04.680+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-30T15:00:04.681+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-07-30T15:00:04.798+08:00  INFO 45028 --- [SpringMVC_demo2] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1898 ms
+2026-07-30T15:00:05.966+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-30T15:00:05.971+08:00  INFO 45028 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Started SpringMvcDemo2Application in 4.492 seconds (process running for 6.361)
+2026-07-30T15:00:13.597+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-30T15:00:13.597+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-30T15:00:13.598+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-30T15:00:13.683+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] c.w.s.controller.UserController          : 用户登录,name:admin
+2026-07-30T15:00:13.718+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-30T15:00:14.017+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c792b81
+2026-07-30T15:00:14.021+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-30T15:01:04.002+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.UserController          : 用户登录,name:admin
+2026-07-30T16:31:37.775+08:00  INFO 45028 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30T16:31:37.783+08:00  INFO 45028 --- [SpringMVC_demo2] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-30T16:31:37.790+08:00  INFO 45028 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-30T16:31:37.794+08:00  INFO 45028 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
