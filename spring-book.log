@@ -42,3 +42,7 @@
 2026-08-02T11:38:52.627+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-3] c.w.springmvc_demo2.aop.TimeAspect       : boolean com.wenbobi.springmvc_demo2.controller.UserController.login(String,String,HttpSession)方法执行时间：244
 2026-08-02T11:38:52.735+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
 2026-08-02T11:38:52.752+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.springmvc_demo2.aop.TimeAspect       : Result com.wenbobi.springmvc_demo2.controller.BookController.getPageList(PageRequest)方法执行时间：17
+2026-08-02T11:58:08.272+08:00  INFO 57784 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-02T11:58:08.277+08:00  INFO 57784 --- [SpringMVC_demo2] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-02T11:58:08.280+08:00  INFO 57784 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-02T11:58:08.285+08:00  INFO 57784 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

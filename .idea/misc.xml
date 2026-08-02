@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/mybatis-plus-demo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-trans/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-theory/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringAOP/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
