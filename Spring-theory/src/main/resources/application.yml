@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: mybatis-plus-demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mybatis_test?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: "0614"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis-plus:
+#  configuration:
+#    map-underscore-to-camel-case: true

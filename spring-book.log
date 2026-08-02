@@ -1,20 +1,44 @@
-2026-07-30T15:00:02.759+08:00  INFO 45028 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Starting SpringMvcDemo2Application using Java 21.0.5 with PID 45028 (D:\java_code\Java_learning\SpringMVC_demo2\target\classes started by 21994 in D:\java_code\Java_learning)
-2026-07-30T15:00:02.777+08:00  INFO 45028 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : No active profile set, falling back to 1 default profile: "default"
-2026-07-30T15:00:04.658+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-07-30T15:00:04.680+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-30T15:00:04.681+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-07-30T15:00:04.798+08:00  INFO 45028 --- [SpringMVC_demo2] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1898 ms
-2026-07-30T15:00:05.966+08:00  INFO 45028 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-07-30T15:00:05.971+08:00  INFO 45028 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Started SpringMvcDemo2Application in 4.492 seconds (process running for 6.361)
-2026-07-30T15:00:13.597+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-30T15:00:13.597+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-07-30T15:00:13.598+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-07-30T15:00:13.683+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] c.w.s.controller.UserController          : 用户登录,name:admin
-2026-07-30T15:00:13.718+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-07-30T15:00:14.017+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c792b81
-2026-07-30T15:00:14.021+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-07-30T15:01:04.002+08:00  INFO 45028 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.UserController          : 用户登录,name:admin
-2026-07-30T16:31:37.775+08:00  INFO 45028 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-07-30T16:31:37.783+08:00  INFO 45028 --- [SpringMVC_demo2] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-07-30T16:31:37.790+08:00  INFO 45028 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-07-30T16:31:37.794+08:00  INFO 45028 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-02T11:30:47.893+08:00  INFO 55604 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Starting SpringMvcDemo2Application using Java 21.0.5 with PID 55604 (D:\java_code\Java_learning\SpringMVC_demo2\target\classes started by 21994 in D:\java_code\Java_learning)
+2026-08-02T11:30:47.902+08:00  INFO 55604 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : No active profile set, falling back to 1 default profile: "default"
+2026-08-02T11:30:49.337+08:00  INFO 55604 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-02T11:30:49.354+08:00  INFO 55604 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-02T11:30:49.354+08:00  INFO 55604 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-02T11:30:49.428+08:00  INFO 55604 --- [SpringMVC_demo2] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1458 ms
+2026-08-02T11:30:50.357+08:00  INFO 55604 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-02T11:30:50.361+08:00  INFO 55604 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Started SpringMvcDemo2Application in 3.113 seconds (process running for 4.047)
+2026-08-02T11:31:20.905+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-02T11:31:20.905+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-02T11:31:20.908+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-02T11:31:21.033+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-6] c.w.s.config.LoginInterceptor            : 用户未登录,请求被拦截: /book/getPageList
+2026-08-02T11:31:26.765+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-3] c.w.s.controller.UserController          : 用户登录,name:admin
+2026-08-02T11:31:26.796+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-02T11:31:26.952+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60ecebdd
+2026-08-02T11:31:26.953+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-02T11:31:27.032+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-3] c.w.springmvc_demo2.aop.TimeAspect       : boolean com.wenbobi.springmvc_demo2.controller.UserController.login(String,String,HttpSession)方法执行时间：265
+2026-08-02T11:31:27.082+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
+2026-08-02T11:31:27.106+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.springmvc_demo2.aop.TimeAspect       : Result com.wenbobi.springmvc_demo2.controller.BookController.getPageList(PageRequest)方法执行时间：24
+2026-08-02T11:35:19.489+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-8] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
+2026-08-02T11:35:19.501+08:00  INFO 55604 --- [SpringMVC_demo2] [http-nio-8080-exec-8] c.w.springmvc_demo2.aop.TimeAspect       : Result com.wenbobi.springmvc_demo2.controller.BookController.getPageList(PageRequest)方法执行时间：12
+2026-08-02T11:38:35.944+08:00  INFO 55604 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-02T11:38:35.949+08:00  INFO 55604 --- [SpringMVC_demo2] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-02T11:38:35.953+08:00  INFO 55604 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-02T11:38:35.962+08:00  INFO 55604 --- [SpringMVC_demo2] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-02T11:38:42.413+08:00  INFO 57784 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Starting SpringMvcDemo2Application using Java 21.0.5 with PID 57784 (D:\java_code\Java_learning\SpringMVC_demo2\target\classes started by 21994 in D:\java_code\Java_learning)
+2026-08-02T11:38:42.416+08:00  INFO 57784 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : No active profile set, falling back to 1 default profile: "default"
+2026-08-02T11:38:43.397+08:00  INFO 57784 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-02T11:38:43.409+08:00  INFO 57784 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-02T11:38:43.409+08:00  INFO 57784 --- [SpringMVC_demo2] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-02T11:38:43.472+08:00  INFO 57784 --- [SpringMVC_demo2] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1008 ms
+2026-08-02T11:38:44.037+08:00  INFO 57784 --- [SpringMVC_demo2] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-02T11:38:44.041+08:00  INFO 57784 --- [SpringMVC_demo2] [main] c.w.s.SpringMvcDemo2Application          : Started SpringMvcDemo2Application in 2.144 seconds (process running for 2.718)
+2026-08-02T11:38:46.567+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-02T11:38:46.567+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-02T11:38:46.569+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-02T11:38:46.622+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-2] c.w.s.config.LoginInterceptor            : 用户未登录,请求被拦截: /book/getPageList
+2026-08-02T11:38:52.382+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-3] c.w.s.controller.UserController          : 用户登录,name:admin
+2026-08-02T11:38:52.405+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-02T11:38:52.575+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@614cef2c
+2026-08-02T11:38:52.577+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-02T11:38:52.627+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-3] c.w.springmvc_demo2.aop.TimeAspect       : boolean com.wenbobi.springmvc_demo2.controller.UserController.login(String,String,HttpSession)方法执行时间：244
+2026-08-02T11:38:52.735+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.s.controller.BookController          : 查询图书列表,pageRequest=PageRequest(currentPage=1, pageSize=10, offset=0)
+2026-08-02T11:38:52.752+08:00  INFO 57784 --- [SpringMVC_demo2] [http-nio-8080-exec-4] c.w.springmvc_demo2.aop.TimeAspect       : Result com.wenbobi.springmvc_demo2.controller.BookController.getPageList(PageRequest)方法执行时间：17

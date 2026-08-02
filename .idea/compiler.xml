@@ -17,11 +17,21 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="mybatis-plus-demo" />
         <module name="mybatis-demo" />
         <module name="Spring-ioc-demo1" />
         <module name="spring-trans" />
+      </profile>
+      <profile name="Annotation profile for mybatis-plus-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../Maven/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="mybatis-plus-demo" />
+        <module name="Spring-theory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +43,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Spring-ioc-demo1" options="-parameters" />
+      <module name="Spring-theory" options="-parameters" />
       <module name="SpringMVC_demo1" options="-parameters" />
       <module name="SpringMVC_demo2" options="-parameters" />
       <module name="captcha-demo" options="-parameters" />
